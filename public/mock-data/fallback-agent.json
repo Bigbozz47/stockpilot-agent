@@ -1,0 +1,28 @@
+{
+  "mode": "MOCK",
+  "thoughts": [
+    "[OBSERVE] SKU MLK-FULL-1L at 7 cartons vs safety stock 30 — breach confirmed, deficit 23 before burn.",
+    "[REASON] Friday surge imminent: 9 cartons/day burn. SUP-A (48h, MOQ 50, x1.00) risks weekend stockout; SUP-B (6h express, MOQ 10, x1.05) covers surge at 5% premium; SUP-C (24h, MOQ 25) is the middle path.",
+    "[PLAN] Selecting SUP-B Express Logistics Hub: 6-hour lead beats the weekend clock. Cost delta is trivial vs lost sales.",
+    "[ACT] Invoking create_purchase_order_draft via deterministic math engine — no hallucinated figures.",
+    "[VERIFY] Draft totals reconciled: quantity x unit price = subtotal. Awaiting operator approval."
+  ],
+  "toolCalls": [
+    { "tool": "check_inventory_status", "args": { "sku": "MLK-FULL-1L" } },
+    { "tool": "evaluate_competing_suppliers", "args": { "sku": "MLK-FULL-1L", "unitsNeeded": 25 } },
+    { "tool": "create_purchase_order_draft", "args": { "sku": "MLK-FULL-1L", "supplierCode": "SUP-B", "quantity": 26, "reasoning": "Weekend surge: 6h express beats 48h bulk; 5% premium justified." } }
+  ],
+  "proposal": {
+    "poNumber": "PO-MOCK-DEMO01",
+    "sku": "MLK-FULL-1L",
+    "productName": "Full Cream Milk 1L",
+    "supplierCode": "SUP-B",
+    "supplierName": "Express Logistics Hub",
+    "leadTimeHours": 6,
+    "quantity": 26,
+    "unitPrice": 23100,
+    "totalAmount": 600600,
+    "reasoning": "Weekend surge imminent (9 cartons/day). SUP-B 6h express at 5% premium beats SUP-A 48h bulk risk of stockout. Deterministic totals, awaiting approval.",
+    "mock": true
+  }
+}

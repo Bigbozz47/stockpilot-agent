@@ -1,0 +1,22 @@
+{
+  "model": "meta-vision-receipt-ocr-1.0",
+  "language": "id-en",
+  "latencyMs": 38,
+  "fallbackActive": true,
+  "receipts": {
+    "B2B_CAFE_RUSH": {
+      "receiptId": "POS-8841",
+      "store": "UNP Mart Flagship",
+      "cashier": "Kasir 03 - Dewi",
+      "timestamp": "Friday 16:45 WIB",
+      "lineItems": [
+        { "sku": "CF-BEAN-1KG", "name": "Premium Coffee Beans 1kg", "quantity": 14, "unitPrice": 145000, "subtotal": 2030000 },
+        { "sku": "MLK-OAT-1L", "name": "Oat Milk 1L", "quantity": 5, "unitPrice": 35000, "subtotal": 175000 }
+      ],
+      "totalItems": 19,
+      "totalAmount": 2205000,
+      "ocrConfidence": 0.987,
+      "extractedIntent": { "action": "PROCESS_POS_CHECKOUT", "sku": "CF-BEAN-1KG", "deductQuantity": 14 }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model": "sam-3.1",
+  "prompt": "cardboard delivery carton",
+  "imageRef": "dock-cam-01/frame-latest",
+  "packSizeKg": 5,
+  "full": {
+    "expectedBoxes": 6,
+    "detectedBoxes": 6,
+    "missingBoxes": 0,
+    "verifiedKg": 30,
+    "avgConfidence": 0.984,
+    "latencyMs": 142,
+    "boxes": [
+      { "id": "carton-1", "label": "Carton #1 (5kg Arabica)", "bbox": [0.06, 0.3, 0.13, 0.42], "confidence": 0.99, "status": "VERIFIED" },
+      { "id": "carton-2", "label": "Carton #2 (5kg Arabica)", "bbox": [0.21, 0.3, 0.13, 0.42], "confidence": 0.99, "status": "VERIFIED" },
+      { "id": "carton-3", "label": "Carton #3 (5kg Arabica)", "bbox": [0.36, 0.3, 0.13, 0.42], "confidence": 0.98, "status": "VERIFIED" },
+      { "id": "carton-4", "label": "Carton #4 (5kg Arabica)", "bbox": [0.51, 0.3, 0.13, 0.42], "confidence": 0.98, "status": "VERIFIED" },
+      { "id": "carton-5", "label": "Carton #5 (5kg Arabica)", "bbox": [0.66, 0.3, 0.13, 0.42], "confidence": 0.98, "status": "VERIFIED" },
+      { "id": "carton-6", "label": "Carton #6 (5kg Arabica)", "bbox": [0.81, 0.3, 0.13, 0.42], "confidence": 0.98, "status": "VERIFIED" }
+    ]
+  },
+  "partial": {
+    "expectedBoxes": 6,
+    "detectedBoxes": 5,
+    "missingBoxes": 1,
+    "verifiedKg": 25,
+    "avgConfidence": 0.977,
+    "latencyMs": 138,
+    "boxes": [
+      { "id": "carton-1", "label": "Carton #1 (5kg Arabica)", "bbox": [0.06, 0.3, 0.13, 0.42], "confidence": 0.99, "status": "VERIFIED" },
+      { "id": "carton-2", "label": "Carton #2 (5kg Arabica)", "bbox": [0.21, 0.3, 0.13, 0.42], "confidence": 0.98, "status": "VERIFIED" },
+      { "id": "carton-3", "label": "Carton #3 (5kg Arabica)", "bbox": [0.36, 0.3, 0.13, 0.42], "confidence": 0.98, "status": "VERIFIED" },
+      { "id": "carton-4", "label": "Carton #4 (5kg Arabica)", "bbox": [0.51, 0.3, 0.13, 0.42], "confidence": 0.97, "status": "VERIFIED" },
+      { "id": "carton-5", "label": "Carton #5 (5kg Arabica)", "bbox": [0.66, 0.3, 0.13, 0.42], "confidence": 0.97, "status": "VERIFIED" },
+      { "id": "carton-6", "label": "Carton #6 MISSING (shortfall)", "bbox": [0.81, 0.3, 0.13, 0.42], "confidence": 0.0, "status": "MISSING" }
+    ]
+  }
+}

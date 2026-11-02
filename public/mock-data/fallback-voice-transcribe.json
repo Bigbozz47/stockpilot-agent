@@ -1,0 +1,22 @@
+{
+  "model": "muse-voice-transcribe-1.0",
+  "language": "id-en",
+  "estimatedCostUsd": 0.00025,
+  "vocabularyBias": ["COF-001", "MLK-002", "MTC-003", "UNP Mart", "Safety Stock", "Escrow", "Arabica", "Carton"],
+  "presets": {
+    "URGENT_RESTOCK_VOICE": {
+      "transcript": "Lapor bos, stok COF-001 Arabica Coffee Beans di gudang UNP Mart drop ke 6 kilogram karena Friday rush. Tolong trigger express restock sekarang!",
+      "speakerLabel": "Speaker 1 (Warehouse Lead - Budi)",
+      "turnTiming": "00:00.20 - 00:04.85",
+      "biasedKeywordsMatched": ["COF-001", "UNP Mart", "Arabica", "6 kilogram"],
+      "extractedIntent": { "action": "TRIGGER_DEPLETION_AND_AGENT", "sku": "COF-001", "reportedStock": 6, "urgency": "HIGH" }
+    },
+    "PARTIAL_POD_VOICE": {
+      "transcript": "Kurir Supplier B baru bongkar muatan COF-001, tapi fisik yang datang cuma 5 carton alias 25 kilogram. Kurang 5 kilo, tahan sisa pembayaran di escrow.",
+      "speakerLabel": "Speaker 1 (Receiving Dock - Andi)",
+      "turnTiming": "00:00.15 - 00:04.40",
+      "biasedKeywordsMatched": ["COF-001", "Supplier B", "5 carton", "25 kilogram", "escrow"],
+      "extractedIntent": { "action": "VERIFY_PARTIAL_DELIVERY", "sku": "COF-001", "receivedQuantity": 25, "slaBreached": false }
+    }
+  }
+}
